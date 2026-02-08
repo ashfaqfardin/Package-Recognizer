@@ -1,6 +1,8 @@
 ---
-title: Home
-layout: page
+layout: single
+title: "Welcome to Packaging Recognizer"
+header:
+  overlay_color: "#333"
 ---
 
 # Packaging Recognizer
@@ -21,3 +23,5 @@ An image classification system that identifies and classifies common consumer pr
 10. Cooking Oil Bottles
 11. Coffee Jars
 12. Detergent Packs
+
+[Try the Recognizer](/pkg_recognizer)
