@@ -1,0 +1,10 @@
+remote_theme: daviddarnes/alembic@main
+plugins:
+- jekyll-remote-theme
+
+title: Packaging Recognizer
+description: An image classification system that identifies and classifies daily object packaging into multiple categories including bottled water, milk cartons, snack chips, and other common consumer products
+
+author:
+  name: Mohammad Ashfaq Ur Rahman
+  email: imashfaqfardin@gmail.com
