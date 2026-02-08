@@ -1,43 +1,10 @@
-remote_theme: pages-themes/minimal@v0.2.0
+remote_theme: daviddarnes/alembic@main
 plugins:
-  - jekyll-remote-theme
+- jekyll-remote-theme
 
 title: Packaging Recognizer
-tagline: Intelligent packaging image classifier
-description: "A lightweight image-classification system that identifies common consumer packaging (for example: bottled water, milk cartons, and snack bags). This site hosts documentation, demos, and model artifacts for the project."
-
-baseurl: "" # set if site is served from a subpath (e.g., /repo-name)
-url: ""     # set to your site's full URL in production (e.g., https://username.github.io)
-
-favicon: "/assets/favicon.ico"
-logo: "/assets/images/logo.png"
+description: An image classification system that identifies and classifies daily object packaging into multiple categories including bottled water, milk cartons, snack chips, and other common consumer products
 
 author:
-  name: "Mohammad Ashfaq Ur Rahman"
-  email: "imashfaqfardin@gmail.com"
-  github: "ashfaqfardin"
-
-permalink: /:title/
-
-theme_settings:
-  header_links:
-    - title: "Home"
-      url: "/"
-    - title: "Demo"
-      url: "/pkg_recognizer/"
-  show_author: true
-
-markdown: kramdown
-kramdown:
-  input: GFM
-
-exclude:
-  - node_modules
-  - vendor
-  - Gemfile.lock
-
-social_links:
-  - name: "GitHub"
-    url: "https://github.com/ashfaqfardin/Package-Recognizer"
-
-# Optional: analytics, search, or additional theme configuration can be added here
+  name: Mohammad Ashfaq Ur Rahman
+  email: imashfaqfardin@gmail.com
