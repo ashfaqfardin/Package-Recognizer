@@ -2,23 +2,11 @@
 title: Packaging Recognizer
 layout: page
 ---
+---
 
-<input id="photo" type="file">
-<div id="results"></div>
-<script type="module">
-    import { Client } from "https://esm.sh/@gradio/client";
+<script
+	type="module"
+	src="https://gradio.s3-us-west-2.amazonaws.com/5.49.1/gradio.js"
+></script>
 
-    const input = document.getElementById("photo");
-    const results = document.getElementById("results");
-    
-    input.addEventListener("change", async () => {
-        const client = await Client.connect("ashfaqfardin/pkg_recognizer"); // connect to the space
-            
-        const file = input.files[0]; 
-        const result = await client.predict("/predict", { image: file }); // send the File as image component
-        const label = result.data[0].label;     // Get the most probable label
-        
-        const imgURL = URL.createObjectURL(file);
-        results.innerHTML = `<br/><img src="${imgURL}" width="500"/><p>${label}</p>`;
-      });
-</script>
+<gradio-app src="https://ashfaqfardin-pkg-recognizer.hf.space"></gradio-app>
