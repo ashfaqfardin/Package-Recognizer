@@ -7,7 +7,7 @@ title: "Home"
 
 An image classification system that identifies and classifies common consumer product packaging into 12 distinct categories.
 
-[**Try the Model Here**](/pkg_recognizer/)
+[**Try the Model Here**](/Package-Recognizer/pkg_recognizer/)
 
 ## Supported Packaging Categories
 
