@@ -1,14 +1,17 @@
 ---
 layout: single
-title: "AI Model Demo"
+title: "Packaging Recognizer Model"
 permalink: /pkg_recognizer/
+author_profile: true
 ---
 
-<p>Upload an image of a product to see the classification in real-time:</p>
+<div id="model-container">
+  <p>Upload an image of a product to see the classification in real-time:</p>
+  
+  <script
+    type="module"
+    src="https://gradio.s3-us-west-2.amazonaws.com/5.49.1/gradio.js"
+  ></script>
 
-<script
-	type="module"
-	src="https://gradio.s3-us-west-2.amazonaws.com/5.49.1/gradio.js"
-></script>
-
-<gradio-app src="https://ashfaqfardin-pkg-recognizer.hf.space"></gradio-app>
+  <gradio-app src="https://ashfaqfardin-pkg-recognizer.hf.space"></gradio-app>
+</div>

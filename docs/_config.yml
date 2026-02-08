@@ -4,6 +4,8 @@ plugins:
   - jekyll-remote-theme
   - jekyll-include-cache
 
+include: ["pkg_recognizer.html"]
+
 # Project Information
 title: "Packaging Recognizer"
 description: "AI-powered image classification for consumer packaging."
