@@ -1,30 +1,25 @@
 # Theme Settings
-remote_theme: "mmistakes/minimal-mistakes" # Use the main theme branch
+remote_theme: "mmistakes/minimal-mistakes"
 plugins:
   - jekyll-remote-theme
   - jekyll-include-cache
 
-include: ["pkg_recognizer.html"]
-
 # Project Information
 title: "Packaging Recognizer"
-description: "AI-powered image classification for consumer packaging."
-url: "" 
-locale: "en-US"
+description: "An image classification system that identifies and classifies consumer product packaging."
+url: "https://ashfaqfardin.github.io" 
+baseurl: "" # Ensure this is empty if the repo name is ashfaqfardin.github.io
 
 # Author Details
 author:
   name: "Mohammad Ashfaq Ur Rahman"
+  email: "imashfaqfardin@gmail.com"
   location: "Bangladesh"
-  links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:imashfaqfardin@gmail.com"
 
 # Layout Settings
 defaults:
   - scope:
       path: ""
     values:
-      layout: "single" # This tells Jekyll to use the theme's default layout
+      layout: "single" # Changed from 'page' to 'single' for better compatibility
       author_profile: true

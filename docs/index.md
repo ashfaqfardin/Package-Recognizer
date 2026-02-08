@@ -1,13 +1,13 @@
 ---
 layout: single
-title: "Welcome to Packaging Recognizer"
-header:
-  overlay_color: "#333"
+title: "Home"
 ---
 
 # Packaging Recognizer
 
 An image classification system that identifies and classifies common consumer product packaging into 12 distinct categories.
+
+[**Try the Model Here**](/pkg_recognizer/)
 
 ## Supported Packaging Categories
 
@@ -23,5 +23,3 @@ An image classification system that identifies and classifies common consumer pr
 10. Cooking Oil Bottles
 11. Coffee Jars
 12. Detergent Packs
-
-[Try the Recognizer](/pkg_recognizer)
