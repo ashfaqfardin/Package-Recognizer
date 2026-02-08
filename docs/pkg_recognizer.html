@@ -6,19 +6,36 @@ layout: page
 <input id="photo" type="file">
 <div id="results"></div>
 <script type="module">
-    import { Client } from "https://esm.sh/@gradio/client";
+  import { Client, handle_file } from "https://esm.sh/@gradio/client";
 
-    const input = document.getElementById("photo");
-    const results = document.getElementById("results");
-    
-    input.addEventListener("change", async () => {
-        const client = await Client.connect("ashfaqfardin/pkg_recognizer"); // connect to the space
-            
-        const file = input.files[0]; 
-        const result = await client.predict("/predict", { image: file }); // send the File as image component
-        const label = result.data[0].label;     // Get the most probable label
-        
-        const imgURL = URL.createObjectURL(file);
-        results.innerHTML = `<br/><img src="${imgURL}" width="500"/><p>${label}</p>`;
-      });
+  const input = document.getElementById("photo");
+  const results = document.getElementById("results");
+
+  input.addEventListener("change", async () => {
+    try {
+      const client = await Client.connect("ashfaqfardin/pkg_recognizer");
+      const file = input.files[0];
+
+      const payload = { image: handle_file(file) };
+      const result = await client.predict("/predict", payload);
+
+      let label = "";
+      if (Array.isArray(result?.data) && result.data.length > 0) {
+        const first = result.data[0];
+        if (first && typeof first === 'object' && 'label' in first) {
+          label = first.label;
+        } else {
+          label = String(first);
+        }
+      } else {
+        label = "(no prediction)";
+      }
+
+      const imgURL = URL.createObjectURL(file);
+      results.innerHTML = `<br/><img src="${imgURL}" width="500"/><p>${label}</p>`;
+    } catch (err) {
+      console.error(err);
+      results.textContent = `Error: ${err?.message ?? err}`;
+    }
+  });
 </script>
