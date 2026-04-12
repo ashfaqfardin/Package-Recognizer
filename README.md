@@ -13,6 +13,8 @@ A deep learning-based image classification application that recognizes and categ
 
 - [Overview](#-overview)
 - [Features](#-features)
+- [Models Used](#-models-used)
+- [Gradio Interface](#-gradio-interface)
 - [Supported Categories](#-supported-categories)
 - [Quick Start](#-quick-start)
 - [Project Structure](#-project-structure)
@@ -39,6 +41,11 @@ Package-Recognizer is a computer vision project designed to automatically classi
 ## Models Used
 - **ResNet34**: Primary model for deployment
 - **MobileNetV3_Large_100**: Alternative model for experimentation
+
+## Gradio Interface
+Upload an image of a packaged product and receive the predicted category along with confidence scores.
+![Gradio App Interface](./images/image.png)
+
 
 ## Categories
 
