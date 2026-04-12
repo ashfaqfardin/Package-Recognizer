@@ -36,6 +36,10 @@ Package-Recognizer is a computer vision project designed to automatically classi
 - **Jupyter Notebooks**: Complete workflow from data preparation to inference
 - **Reproducible Pipeline**: Well-documented data cleaning and training process
 
+## Models Used
+- **ResNet34**: Primary model for deployment
+- **MobileNetV3_Large_100**: Alternative model for experimentation
+
 ## Categories
 
 1. Bottled Water
